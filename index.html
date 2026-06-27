@@ -789,12 +789,46 @@
         setupAutoCarousel('auto-carousel-top', 1);
         setupAutoCarousel('auto-carousel-bottom', -1);
 
-        document.querySelectorAll('a[href="#oferta"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetElement = document.querySelector(this.getAttribute('href'));
-                if (targetElement) targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const checkoutLinks = {
+            basic: 'https://pay.wiapy.com/5G3wPT3PJVd',
+            complete: 'https://pay.wiapy.com/ZApV0rOl5o'
+        };
+
+        function enforceButtonLinks() {
+            document.querySelectorAll('a').forEach(anchor => {
+                const text = anchor.textContent.trim().replace(/\s+/g, ' ');
+                if (text === 'ADQUIRIR LAYOUTS AGORA') {
+                    if (anchor.getAttribute('href') !== '#oferta') anchor.setAttribute('href', '#oferta');
+                }
+                if (text === 'QUERO O PACOTE BÁSICO') {
+                    if (anchor.getAttribute('href') !== checkoutLinks.basic) anchor.setAttribute('href', checkoutLinks.basic);
+                }
+                if (text === 'QUERO O PACOTE COMPLETO') {
+                    if (anchor.getAttribute('href') !== checkoutLinks.complete) anchor.setAttribute('href', checkoutLinks.complete);
+                }
             });
+        }
+
+        enforceButtonLinks();
+        setTimeout(enforceButtonLinks, 500);
+        setTimeout(enforceButtonLinks, 1500);
+        setTimeout(enforceButtonLinks, 3000);
+        new MutationObserver(enforceButtonLinks).observe(document.body, {
+            subtree: true,
+            childList: true,
+            attributes: true,
+            attributeFilter: ['href']
+        });
+
+        document.addEventListener('click', function (e) {
+            const anchor = e.target.closest('a');
+            if (!anchor) return;
+            const text = anchor.textContent.trim().replace(/\s+/g, ' ');
+            if (text === 'ADQUIRIR LAYOUTS AGORA' || anchor.getAttribute('href') === '#oferta') {
+                e.preventDefault();
+                const targetElement = document.querySelector('#oferta');
+                if (targetElement) targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         });
     </script>
 </body>
