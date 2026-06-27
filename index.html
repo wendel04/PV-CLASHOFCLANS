@@ -86,6 +86,15 @@
         .hero-bullets > div {
             font-weight: 700 !important;
         }
+        .highlight-tag {
+            background: #e8f3ff;
+            border: 1.5px solid #93c5fd;
+            box-shadow: 0 8px 18px rgba(37, 99, 235, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+            color: #111827;
+        }
+        .highlight-tag span:first-child {
+            color: #2563eb;
+        }
         .ideal-card {
             background: #ecfff4;
             border: 1.5px solid #71e39c;
@@ -341,12 +350,15 @@
             }
 
             .hero-bullets {
-                grid-template-columns: 1fr !important;
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
             }
 
             .hero-bullets > div {
-                grid-column: auto !important;
-                min-height: 3rem;
+                min-height: 2.35rem;
+            }
+
+            .hero-bullets > div:first-child {
+                grid-column: 1 / -1 !important;
             }
 
             .model-carousel > div {
@@ -416,14 +428,14 @@
                 Tenha acesso aos Layouts Pro CWL: uma coleção de layouts dos principais jogadores profissionais de Clash of Clans, sempre atualizados conforme o meta competitivo, organizados por Centro de Vila para você copiar e usar.
             </p>
 
-            <div class="hero-bullets grid grid-cols-2 gap-2.5 sm:gap-3 w-full max-w-xl mb-8 px-2">
-                <div class="col-span-2 bg-blue-50 border border-blue-100 rounded-full px-4 sm:px-5 py-3 text-left text-xs sm:text-sm flex items-center gap-3"><span class="text-blue-600 shrink-0 font-bold">✓</span> <span>Layouts dos principais jogadores atualizados</span></div>
-                <div class="bg-blue-50 border border-blue-100 rounded-full px-4 sm:px-5 py-3 text-left text-xs sm:text-sm flex items-center gap-3"><span class="text-blue-600 shrink-0 font-bold">✓</span> <span>GAKU</span></div>
-                <div class="bg-blue-50 border border-blue-100 rounded-full px-4 sm:px-5 py-3 text-left text-xs sm:text-sm flex items-center gap-3"><span class="text-blue-600 shrink-0 font-bold">✓</span> <span>Klaus</span></div>
-                <div class="bg-blue-50 border border-blue-100 rounded-full px-4 sm:px-5 py-3 text-left text-xs sm:text-sm flex items-center gap-3"><span class="text-blue-600 shrink-0 font-bold">✓</span> <span>Nebrax</span></div>
-                <div class="bg-blue-50 border border-blue-100 rounded-full px-4 sm:px-5 py-3 text-left text-xs sm:text-sm flex items-center gap-3"><span class="text-blue-600 shrink-0 font-bold">✓</span> <span>pCastro</span></div>
-                <div class="bg-blue-50 border border-blue-100 rounded-full px-4 sm:px-5 py-3 text-left text-xs sm:text-sm flex items-center gap-3"><span class="text-blue-600 shrink-0 font-bold">✓</span> <span>STARs</span></div>
-                <div class="bg-blue-50 border border-blue-100 rounded-full px-4 sm:px-5 py-3 text-left text-xs sm:text-sm flex items-center gap-3"><span class="text-blue-600 shrink-0 font-bold">✓</span> <span>TryHard</span></div>
+            <div class="hero-bullets grid grid-cols-2 gap-2 w-full max-w-xl mb-8 px-2">
+                <div class="highlight-tag col-span-2 rounded-full px-4 sm:px-5 py-2.5 text-left text-[11px] sm:text-sm flex items-center gap-2.5"><span class="shrink-0 font-bold">✓</span> <span>Layouts dos principais jogadores atualizados</span></div>
+                <div class="highlight-tag rounded-full px-3 py-2 text-center text-[11px] sm:text-xs flex items-center justify-center gap-1.5"><span class="shrink-0 font-bold">✓</span> <span>GAKU</span></div>
+                <div class="highlight-tag rounded-full px-3 py-2 text-center text-[11px] sm:text-xs flex items-center justify-center gap-1.5"><span class="shrink-0 font-bold">✓</span> <span>Klaus</span></div>
+                <div class="highlight-tag rounded-full px-3 py-2 text-center text-[11px] sm:text-xs flex items-center justify-center gap-1.5"><span class="shrink-0 font-bold">✓</span> <span>Nebrax</span></div>
+                <div class="highlight-tag rounded-full px-3 py-2 text-center text-[11px] sm:text-xs flex items-center justify-center gap-1.5"><span class="shrink-0 font-bold">✓</span> <span>pCastro</span></div>
+                <div class="highlight-tag rounded-full px-3 py-2 text-center text-[11px] sm:text-xs flex items-center justify-center gap-1.5"><span class="shrink-0 font-bold">✓</span> <span>STARs</span></div>
+                <div class="highlight-tag rounded-full px-3 py-2 text-center text-[11px] sm:text-xs flex items-center justify-center gap-1.5"><span class="shrink-0 font-bold">✓</span> <span>TryHard</span></div>
             </div>
 
             <div class="flex flex-col items-center gap-3 sm:gap-4 w-full px-2">
@@ -473,13 +485,13 @@
                 <div class="w-full max-w-4xl mx-auto p-0 sm:p-2">
                     <h3 class="text-lg sm:text-xl font-bold text-zinc-950 mb-5 text-center">ENCONTRE LAYOUTS PREPARADOS PARA DIFERENTES OBJETIVOS:</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:text-base font-bold text-zinc-800">
-                        <div class="bg-blue-50 border border-blue-100 rounded-full px-4 sm:px-5 py-3 flex items-center gap-3">🏆 <span>CWL</span></div>
-                        <div class="bg-blue-50 border border-blue-100 rounded-full px-4 sm:px-5 py-3 flex items-center gap-3">⚔️ <span>Guerra</span></div>
-                        <div class="bg-blue-50 border border-blue-100 rounded-full px-4 sm:px-5 py-3 flex items-center gap-3">🚀 <span>Liga Electro 30 até rumo top Global</span></div>
-                        <div class="bg-blue-50 border border-blue-100 rounded-full px-4 sm:px-5 py-3 flex items-center gap-3">🛡️ <span>Anti-3 estrelas</span></div>
-                        <div class="bg-blue-50 border border-blue-100 rounded-full px-4 sm:px-5 py-3 flex items-center gap-3">🎯 <span>Antiaéreo</span></div>
-                        <div class="bg-blue-50 border border-blue-100 rounded-full px-4 sm:px-5 py-3 flex items-center gap-3">🏰 <span>Híbrido</span></div>
-                        <div class="bg-blue-50 border border-blue-100 rounded-full px-4 sm:px-5 py-3 flex items-center gap-3">👑 <span>Defesa competitiva</span></div>
+                        <div class="highlight-tag rounded-full px-4 sm:px-5 py-3 flex items-center gap-3">🏆 <span>CWL</span></div>
+                        <div class="highlight-tag rounded-full px-4 sm:px-5 py-3 flex items-center gap-3">⚔️ <span>Guerra</span></div>
+                        <div class="highlight-tag rounded-full px-4 sm:px-5 py-3 flex items-center gap-3">🚀 <span>Liga Electro 30 até rumo top Global</span></div>
+                        <div class="highlight-tag rounded-full px-4 sm:px-5 py-3 flex items-center gap-3">🛡️ <span>Anti-3 estrelas</span></div>
+                        <div class="highlight-tag rounded-full px-4 sm:px-5 py-3 flex items-center gap-3">🎯 <span>Antiaéreo</span></div>
+                        <div class="highlight-tag rounded-full px-4 sm:px-5 py-3 flex items-center gap-3">🏰 <span>Híbrido</span></div>
+                        <div class="highlight-tag rounded-full px-4 sm:px-5 py-3 flex items-center gap-3">👑 <span>Defesa competitiva</span></div>
                     </div>
                 </div>
             </div>
@@ -551,14 +563,14 @@
                 <div class="text-center mt-8 text-base sm:text-lg keep-bold text-zinc-900">
                     <p class="mb-3 uppercase keep-bold">Incluindo layouts do profissionais:</p>
                     <div class="flex flex-wrap justify-center gap-2 sm:gap-3">
-                        <span class="bg-blue-50 border border-blue-100 rounded-full px-4 py-2 text-sm sm:text-base keep-bold">GAKU</span>
-                        <span class="bg-blue-50 border border-blue-100 rounded-full px-4 py-2 text-sm sm:text-base keep-bold">Klaus</span>
-                        <span class="bg-blue-50 border border-blue-100 rounded-full px-4 py-2 text-sm sm:text-base keep-bold">Nebrax</span>
-                        <span class="bg-blue-50 border border-blue-100 rounded-full px-4 py-2 text-sm sm:text-base keep-bold">pCastro</span>
-                        <span class="bg-blue-50 border border-blue-100 rounded-full px-4 py-2 text-sm sm:text-base keep-bold">Jojo23</span>
-                        <span class="bg-blue-50 border border-blue-100 rounded-full px-4 py-2 text-sm sm:text-base keep-bold">STARs</span>
-                        <span class="bg-blue-50 border border-blue-100 rounded-full px-4 py-2 text-sm sm:text-base keep-bold">TryHard</span>
-                        <span class="bg-blue-50 border border-blue-100 rounded-full px-4 py-2 text-sm sm:text-base keep-bold">Synthé</span>
+                        <span class="highlight-tag rounded-full px-4 py-2 text-sm sm:text-base keep-bold">GAKU</span>
+                        <span class="highlight-tag rounded-full px-4 py-2 text-sm sm:text-base keep-bold">Klaus</span>
+                        <span class="highlight-tag rounded-full px-4 py-2 text-sm sm:text-base keep-bold">Nebrax</span>
+                        <span class="highlight-tag rounded-full px-4 py-2 text-sm sm:text-base keep-bold">pCastro</span>
+                        <span class="highlight-tag rounded-full px-4 py-2 text-sm sm:text-base keep-bold">Jojo23</span>
+                        <span class="highlight-tag rounded-full px-4 py-2 text-sm sm:text-base keep-bold">STARs</span>
+                        <span class="highlight-tag rounded-full px-4 py-2 text-sm sm:text-base keep-bold">TryHard</span>
+                        <span class="highlight-tag rounded-full px-4 py-2 text-sm sm:text-base keep-bold">Synthé</span>
                     </div>
                     <p class="mt-6 sm:mt-7 text-lg sm:text-xl uppercase keep-bold">E muito mais...</p>
                 </div>
@@ -639,7 +651,7 @@
                     <div class="mt-auto text-center">
                         <p class="text-zinc-500 line-through font-bold text-base sm:text-lg mb-1">De R$ 47,90</p>
                         <p class="price-text text-green-600 font-bold text-2xl sm:text-3xl mb-5">Por apenas R$ 17,90</p>
-                        <a href="#" class="block w-full bg-lime-400 hover:bg-lime-500 text-zinc-950 font-bold py-4 sm:py-5 rounded-full transition-colors uppercase text-xs sm:text-sm px-4 shadow-[0_10px_25px_rgba(163,230,53,0.35)]">QUERO O PACOTE BÁSICO</a>
+                        <a href="https://pay.wiapy.com/5G3wPT3PJVd" class="block w-full bg-lime-400 hover:bg-lime-500 text-zinc-950 font-bold py-4 sm:py-5 rounded-full transition-colors uppercase text-xs sm:text-sm px-4 shadow-[0_10px_25px_rgba(163,230,53,0.35)]">QUERO O PACOTE BÁSICO</a>
                         <div class="mt-6 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-red-600 shadow-sm"><div class="animated-down-arrow keep-bold text-2xl leading-none mb-1">↓</div><p class="keep-bold text-xs sm:text-sm leading-snug">Por apenas R$10 a mais, você ganha 5 bônus exclusivos</p></div>
                     </div>
                 </div>
@@ -678,7 +690,7 @@
                     <div class="mt-auto text-center">
                         <p class="text-zinc-500 line-through font-bold text-base sm:text-lg mb-1">De R$ 97,90</p>
                         <p class="price-text text-green-600 font-bold text-2xl sm:text-3xl mb-5">Por apenas R$ 27,90</p>
-                        <a href="#" class="block w-full bg-lime-400 hover:bg-lime-500 text-zinc-950 font-bold py-4 sm:py-5 rounded-full transition-colors uppercase text-xs sm:text-sm px-4 shadow-[0_10px_25px_rgba(163,230,53,0.35)]">QUERO O PACOTE COMPLETO</a>
+                        <a href="https://pay.wiapy.com/ZApV0rOl5o" class="block w-full bg-lime-400 hover:bg-lime-500 text-zinc-950 font-bold py-4 sm:py-5 rounded-full transition-colors uppercase text-xs sm:text-sm px-4 shadow-[0_10px_25px_rgba(163,230,53,0.35)]">QUERO O PACOTE COMPLETO</a>
                     </div>
                 </div>
             </div>
