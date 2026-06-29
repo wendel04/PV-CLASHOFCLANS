@@ -342,6 +342,12 @@
                 line-height: 1.12 !important;
             }
 
+            .hero-headline {
+                font-size: clamp(1.55rem, 6.6vw, 1.75rem) !important;
+                line-height: 1.04 !important;
+                margin-bottom: 0.9rem !important;
+            }
+
             h2 {
                 font-size: 1.34rem !important;
             }
@@ -406,6 +412,17 @@
                 white-space: normal !important;
             }
         }
+        @media (max-width: 640px) {
+            .hero-headline {
+                font-size: clamp(1.62rem, 6vw, 1.9rem) !important;
+                line-height: 1 !important;
+                margin-bottom: 0.65rem !important;
+            }
+
+            .hero-headline > span {
+                line-height: 1 !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-[#f7f1e6] text-zinc-900 antialiased selection:bg-lime-500 selection:text-zinc-900 pb-0 overflow-x-hidden">
@@ -421,7 +438,7 @@
                 🔒 COMPRA 100% SEGURA E PROTEGIDA
             </div>
 
-            <h1 class="max-w-5xl text-[24px] sm:text-[32px] md:text-[40px] lg:text-[46px] font-bold leading-[1.08] mb-6 sm:mb-8 text-balance">
+            <h1 class="hero-headline max-w-5xl text-[24px] sm:text-[32px] md:text-[40px] lg:text-[46px] font-bold leading-[1.08] mb-6 sm:mb-8 text-balance">
                 <span class="block">Tenha acesso aos</span>
                 <span class="block"><span class="headline-highlight">melhores layouts</span> de</span>
                 <span class="block"><span class="headline-highlight">jogadores profissionais</span></span>
